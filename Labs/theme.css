@@ -8,6 +8,8 @@ header {
 	background-color: #0066FF;
 	padding: 5%;
 	width: 50%;
+	border: 1px solid #000;
+	border-color:#666;
 }
 
 section {
@@ -15,15 +17,18 @@ section {
 	width: 50%;
 	padding: 0% 5% 5% 5%;
 	background-color: #660066;
+	border: 1px solid #000;
+	border-color:#666;
 }
 
 .login {
 	float: right;
 	padding: 0% 5% 5% 5%;
 	background-color: #66FF33;
+	border: 1px solid #000;
+	border-color: #666;
 	display: block;
 	width: 20%;
-	
 }
 
 .form input {
