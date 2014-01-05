@@ -11,38 +11,37 @@ body {
 
 /* Header CSS */
 header {
-	width: 100%;
 	float: left;
-	background-color: rgba(0,0,0,0.5);
-	min-height: 60%;
 	position: fixed;
+	width: 100%;
+	min-height: 60%;	
 	top: 20%;
 	bottom: 20%;
 	border-radius: 10px;
+	background-color: rgba(0,0,0,0.5);
 	box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.35);
 }
 
 /* Header's Heading */
 header h2 {
-	font-size: 30px;
+	padding-top: 10%;	
 	padding-left: 5%;
-	padding-top: 10%;
+	font-size: 30px;
 }
 
 /* Tagline Formatting */
 header p {
+	padding-left: 30%;	
 	font-size: 18px;
-	padding-left: 20%;	
 }
 
 /* Sign in Button */
 header button {
-	display: inline-block;
-    background: #4169E1;
-    width: 200px;
-	padding: 25px;
 	float: right;
-	border: 0;
+	width: 200px;
+	padding: 25px;
+	border: 0;	
+    background: #4169E1;
 }
 
 /* Sign in Button Hover */
