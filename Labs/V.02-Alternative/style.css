@@ -37,15 +37,7 @@ header p {
 }
 
 /* Sign in Button */
-header button {
+header #signinButton {
 	float: right;
-	width: 200px;
 	padding: 25px;
-	border: 0;	
-    background: #4169E1;
-}
-
-/* Sign in Button Hover */
-header button:hover {
-	background: #4162E8;
 }
