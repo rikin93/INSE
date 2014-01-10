@@ -5,13 +5,11 @@
 // @history 
 // 6.1.2014   document created
 // 
-
 (function() {
     var po = document.createElement('script');
     po.type = 'text/javascript';
     po.async = true;
-    po.src = 'https://apis.google.com/js/client:plusone.js';
+    po.src = 'https://plus.google.com/js/client:plusone.js';
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(po, s);
 })();
-
