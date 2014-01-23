@@ -2,4 +2,6 @@
 
 if(!isSignedIn()){
     document.write("not connected");
+
 }
+   document.write(getProfile()['displayName']);

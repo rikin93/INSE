@@ -37,6 +37,6 @@ header p {
 }
 
 /* Sign in Button */
-header #signinButton {
+header #signin-button {
 	float: right;
 }
