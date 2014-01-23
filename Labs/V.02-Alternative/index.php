@@ -17,7 +17,7 @@
                 <button class="g-signin"
                         data-scope="https://www.googleapis.com/auth/plus.login"
                         data-requestvisibleactions="http://schemas.google.com/AddActivity"
-                        data-clientId="156807246102-njiq7taooltr8u5t1jc6atj716pfeh18.apps.googleusercontent.com"
+                        data-clientId="156807246102-ie142okiauhf1e0gma5pq7p9ljtihfb1.apps.googleusercontent.com"
                         data-callback="onSignInCallback"
                         data-theme="dark"
                         data-cookiepolicy="single_host_origin">
