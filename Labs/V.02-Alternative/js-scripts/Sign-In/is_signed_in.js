@@ -1,7 +1,9 @@
 // the connection has to be established and gapi library available at the moment of using this script
 
-if(!isSignedIn()){
-    document.write("not connected");
-
+if (!isSignedIn()) {
+     window.location = "./signed_in_needed.php";
 }
-   document.write(getProfile()['displayName']);
+else {
+    // ok, logged in
+}
+   

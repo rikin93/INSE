@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="stylesheet" type="text/css" href="styles/style.css" />
         <script src="js-scripts/sign_in_callback.js" type="text/javascript"></script>
     </head>
     <body>

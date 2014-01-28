@@ -40,3 +40,9 @@ header p {
 header #signin-button {
 	float: right;
 }
+
+/* Sign out Button */
+header #signout-button {
+	float: right;
+        display: none;
+}
