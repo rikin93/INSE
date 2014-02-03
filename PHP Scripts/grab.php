@@ -1,14 +1,16 @@
 <?php
-$host = "localhost"; // DB Settings
+$host = "localhost"; // DB Settings [Change these!]
 $username = "root";
 $password = "";
-$database = "dprin";
+$database = "db";
 
-mysql_connect($host, $username, $password); // Connect & Select
-mysql_select_db($database);
+mysql_connect($host, $username, $password); // Connect to DB Server
+mysql_select_db($database); // Select the correct DB
 
-$result = mysql_query("SELECT `pid` FROM `debug` WHERE  `uid`=2;"); // Select the value from the DB
-$row = mysql_fetch_row($result); // Fetch the row
-echo $row[0]; // Echo the results [Use a loop]
+$result = mysql_query("SELECT `ProjectId` FROM `Table` WHERE  `UserId`=XX;"); // Select the value from the DB
+// Final MySQL Query ("SELECT (Project ID) & (Project Link) FROM (Correct Table) WHERE (User ID = G+ UserID) 
+$row = mysql_fetch_row($result); // Fetch the found rows
+
+// Echo Logic: While there's data in the row array, Output the data as an <a> link.
 
 ?>
