@@ -24,11 +24,13 @@
                         data-cookiepolicy="single_host_origin">
                 </button>
             </div>
-            <div>
-                <button id="signout-button"
+            <!-- Sign-out button -->
+            <div id="signout-button" style="display: none;">
+                <button id="g-signout"
+                        style="background:transparent; border:none;"
                         onclick="javascript:disconnect();"
-                        >
-                    Sign out
+                >
+                Sign out
                 </button>
             </div>
         </header>

@@ -44,5 +44,4 @@ header #signin-button {
 /* Sign out Button */
 header #signout-button {
 	float: right;
-        display: none;
 }

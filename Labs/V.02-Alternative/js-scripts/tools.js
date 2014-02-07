@@ -19,4 +19,3 @@ function toggleElement(id) {
         el.setAttribute('class', 'hide');
     }
 }
-

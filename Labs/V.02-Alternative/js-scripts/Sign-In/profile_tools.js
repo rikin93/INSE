@@ -13,6 +13,7 @@
  * Global variables to hold the profile and email data.
  */
 var profile;
+var token;
 
 /**
  * Starts post-autorization procedures which can be defined by programmer
@@ -25,12 +26,11 @@ function onSignInCallback(authResult) {
         if (authResult['error'] == undefined) {
             toggleElement('signin-button'); // Hide the sign-in button after successfully signing in the user.
             gapi.client.load('plus', 'v1', loadProfile);  // Trigger request to get iser info
+            token = gapi.auth.getToken().access_token;
             $("#signin-button").hide();
-
             $("#signout-button").show();
-
         } else {
-            console.log('An error occurred');
+            console.log('Not connected');
         }
     } else {
         console.log('Empty authResult');  // Something went wrong
@@ -56,7 +56,6 @@ function loadProfileCallback(obj) {
         storesUserInfo(5);
         window.location = "./project_list.php";
     }
-
 }
 
 
@@ -66,7 +65,9 @@ function storesUserInfo(exdays)
     var d = new Date();
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
     var expires = "expires=" + d.toGMTString();
-    document.cookie = "name=" + profile.displayName + "; avatarlink= " + profile.image.url + ";" + expires;
+    document.cookie = "name=" + profile.displayName + ";" + expires;
+    document.cookie = "avatarlink=" + profile.image.url + ";" + expires;
+    document.cookie = "token=" + token + ";" + expires;
 }
 /**
  * Calls the OAuth2 endpoint to disconnect the app for the user.
@@ -78,27 +79,38 @@ function disconnect() {
     $.ajax({
         type: 'GET',
         url: 'https://accounts.google.com/o/oauth2/revoke?token=' +
-                gapi.auth.getToken().access_token,
+                getAccessToken(),
         async: false,
         contentType: 'application/json',
         dataType: 'jsonp',
         success: function(result) {
             console.log('revoke response: ' + result);
+            disconnectCallback();
         },
         error: function(e) {
             console.log(e);
+            disconnectCallback();
         }
     });
-    $("#signin-button").show();
-    $("#signout-button").hide();
+}
+/**
+ * Callback for asynchronous request for disconnecting the user
+ */
+
+function disconnectCallback() {
     deletesUserInfo();
+    $("#signout-button").hide();
+    $("#signin-button").show();
+    window.location = "./index.php";
 }
 
 /*
  * Deletes user info from cookies
  */
 function deletesUserInfo() {
-    document.cookie = "name=;avatarlink=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+    document.cookie = "name=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+    document.cookie = "avatarlink=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+    document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
 }
 
 /*
@@ -131,18 +143,31 @@ function getCurrentUserAvatarLink() {
     }
     return "";
 }
+/*
+ * Gets current user's access token
+ */
+function getAccessToken() {
+    var name = "token=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++)
+    {
+        var c = ca[i].trim();
+        if (c.indexOf(name) == 0)
+            return c.substring(name.length, c.length);
+    }
+    return "";
+}
 
 /*
  * Checks if the user is logged in
  */
 function isSignedIn() {
-    var name = getCurrentUserName();
-    if (name !== "") {
+    var token = getAccessToken();
+    if (token !== "") {
         return true;
     } else {
         return false;
     }
-
 }
 
 
