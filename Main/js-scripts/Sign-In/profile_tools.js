@@ -65,7 +65,7 @@ function storesUserInfo(exdays)
     var d = new Date();
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
     var expires = "expires=" + d.toGMTString();
-    document.cookie = "name=" + profile.displayName + ";" + expires;
+    document.cookie = "name=" +profile.displayName + ";" + expires;
     document.cookie = "avatarlink=" + profile.image.url + ";" + expires;
     document.cookie = "token=" + token + ";" + expires;
 }

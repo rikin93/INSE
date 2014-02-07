@@ -8,7 +8,7 @@
         <script src="js-scripts/tools.js" type="text/javascript"></script>
         <script src="js-scripts/Sign-In/profile_tools.js" type="text/javascript"></script>
         <link rel="stylesheet" type="text/css" href="styles/style.css" />
-        <link rel="stylesheet" type="text/css" href="styles/signoutButton.css" />
+        <link rel="stylesheet" type="text/css" href="styles/customButton.css" />
     </head>
     <body>
         <header>
@@ -25,7 +25,7 @@
                 </button>
             </div>
             <!-- Sign-out button -->
-            <div id="signout-button" style="display: none;">
+            <div id="signout-button" class="customButton" style="display: none;">
                 <button id="g-signout"
                         style="background:transparent; border:none;"
                         onclick="javascript:disconnect();"

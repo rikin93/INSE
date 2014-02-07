@@ -7,7 +7,7 @@
 
 
     /***FIRST STYLE THE BUTTON***/
-    header #signout-button {
+    .customButton {
     width:100px;
     background: #3e9cbf; /*the colour of the button*/
     padding: 8px 14px 10px; /*apply some padding inside the button*/
@@ -29,7 +29,7 @@
     border-radius: 10px;
     }
     /***SET THE BUTTON'S HOVER AND FOCUS STATES***/
-    header #signout-button:hover, header #signout-button:focus {
+    .customButton:hover, .customButton:focus {
     color:#dfe7ea;
     /*reduce the size of the shadow to give a pushed effect*/
     -webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
