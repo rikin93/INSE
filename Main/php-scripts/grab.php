@@ -1,5 +1,5 @@
 <?php
-$host = "localhost"; // DB Settings [Change these!]
+$host = "localhost"; // DB Settings [Change these, not setted for localhost!]
 $username = "root";
 $password = "";
 $database = "db";
