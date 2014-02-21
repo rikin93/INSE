@@ -12,7 +12,8 @@
     </head>
     <body>
         <header>
-            <h2>We need a project name</h2>
+            <h2>![inse-logo](https://f.cloud.github.com/assets/6122275/2228655/99cd1c0e-9adf-11e3-9e63-ba4347233f4d.jpg)
+</h2>
             <p>For our project!</p>
             <div id="signin-button">
                 <button class="g-signin"
