@@ -13,7 +13,6 @@
     <body>
         <header>
             <src="https://f.cloud.github.com/assets/6122275/2228655/99cd1c0e-9adf-11e3-9e63-ba4347233f4d.jpg" alt="inse-logo">
-            <p>For our project!</p>
             <div id="signin-button">
                 <button class="g-signin"
                         data-scope="https://www.googleapis.com/auth/plus.login"
