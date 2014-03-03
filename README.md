@@ -1,12 +1,12 @@
-# Introduction to Software Engineering
-##	Team 8B
+## Introduction to Software Engineering
+###	Team 8B
 
 ## Members
-* Jakub [711643]: Progress Chaser
-* Ejinn [669963]: Secretary
-* Rikin [650032]: Git Master
-* Bilal [655259]: Lead Designer
-* Harry [616531]: Lead Coder
+* Jakub _[711643]_: Progress Chaser
+* Ejinn _[669963]_: Secretary
+* Rikin _[650032]_: Git Master
+* Bilal _[655259]_: Lead Designer
+* Harry _[616531]_: Lead Coder
 
 ## Abstract
 This piece of software, created using HTML/CSS/PHP and JS, will allow
